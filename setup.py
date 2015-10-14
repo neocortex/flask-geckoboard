@@ -1,28 +1,13 @@
 import os
 from setuptools import setup
 
-import flask_geckoboard
-
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-
-def build_long_description():
-    return "\n\n".join([
-        flask_geckoboard.__doc__,  # @UndefinedVariable
-        read('CHANGELOG.rst'),
-    ])
-
-
 setup(
     name='Flask-Geckoboard',
-    version=flask_geckoboard.__version__,
-    license=flask_geckoboard.__license__,
     description='Geckoboard custom widgets for Flask projects',
-    long_description=build_long_description(),
-    author=flask_geckoboard.__author__,
-    author_email=flask_geckoboard.__email__,
     packages=[
         'flask_geckoboard',
         'tests',
